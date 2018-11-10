@@ -12,11 +12,16 @@ header
     text-align: center;
 }
 
-#page-name
+.page-name
 {
     margin: auto;
     margin-top: 7px;
     display: inline-block;
+}
+
+.page-name::first-letter
+{
+    color: red;
 }
 
 nav
@@ -82,20 +87,18 @@ nav label
     white-space: nowrap;
 }
 
-#list-checkbox:checked ~ main .list span,
-#list-checkbox:checked ~ main .list
-#block-checkbox:checked ~ main .block span,
-#block-checkbox:checked ~ main .block
+.list-checkbox:checked ~ main .list,
+.block-checkbox:checked ~ main .block
 {
     display: none;
 }
 
-#block-checkbox:checked ~ main .cats .description
+.block-checkbox:checked ~ main .cats .description
 {
     display: none;
 }
 
-#list-checkbox:checked ~ main .cats
+.list-checkbox:checked ~ main .cats
 {
     margin: 30px auto;
     display: block;
@@ -104,11 +107,11 @@ nav label
     height: auto;
 }
 
-#list-checkbox:checked ~ main .cats .description,
-#list-checkbox:checked ~ main .cats .cat-name,
-#list-checkbox:checked ~ main .cats .age,
-#list-checkbox:checked ~ main .cats .breed,
-#list-checkbox:checked ~ main .cats .health
+.list-checkbox:checked ~ main .cats .description,
+.list-checkbox:checked ~ main .cats .cat-name,
+.list-checkbox:checked ~ main .cats .age,
+.list-checkbox:checked ~ main .cats .breed,
+.list-checkbox:checked ~ main .cats .health
 {
     margin: 0;
     margin-left: 5px;
