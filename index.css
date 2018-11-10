@@ -34,12 +34,21 @@ nav label
 
 .cats
 {
+    display: inline-block;
     border: 1px solid #000;
     width: 300px;
     height: 350px;
     margin: 10px;
     overflow: hidden;
 }
+
+.cats:hover
+{
+    box-shadow: 0 0 10px 2px #000;
+    transform: scale3d(1.01, 1.01, 1);
+    overflow: hidden;
+}
+
 .cats img
 {
     width: 100%;
@@ -48,31 +57,61 @@ nav label
 
 .page
 {
-    display: inline-block;
+    align-content: center;
     margin: 0 auto;
     max-width: 1300px;
 }
 
-.page p:not(:last-child)
+.cat-name,
+.age,
+.breed,
+.health
 {
     margin: 0;
     margin-left: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.page p
+.status
 {
     margin-left: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-
-/* 
-#list-checkbox:checked ~ main .block span,
-#list-checkbox:checked ~ main .block
+#list-checkbox:checked ~ main .list span,
+#list-checkbox:checked ~ main .list
+#block-checkbox:checked ~ main .block span,
+#block-checkbox:checked ~ main .block
 {
     display: none;
 }
-#block-checkbox:checked ~ main .list span,
-#block-checkbox:checked ~ main .list
+
+#block-checkbox:checked ~ main .cats .description
 {
     display: none;
-} */
+}
+
+#list-checkbox:checked ~ main .cats
+{
+    margin: 30px auto;
+    display: block;
+    align-content: center;
+    width: 50%;
+    height: auto;
+}
+
+#list-checkbox:checked ~ main .cats .description,
+#list-checkbox:checked ~ main .cats .cat-name,
+#list-checkbox:checked ~ main .cats .age,
+#list-checkbox:checked ~ main .cats .breed,
+#list-checkbox:checked ~ main .cats .health
+{
+    margin: 0;
+    margin-left: 5px;
+    overflow: hidden;
+    white-space: normal;
+}
